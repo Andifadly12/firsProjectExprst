@@ -274,3 +274,23 @@
 // app.listen(3000, () => {
 //   console.log('Server berjalan di http://localhost:3000');
 // }); 
+
+
+// const express = require('express');
+// const cors = require('cors');
+
+// const app = express();
+
+// app.use(
+//   cors({
+//     origin: 'http://localhost:3001'
+//   })
+// );
+
+// app.get('/', (req, res) => {
+//   res.json([
+//     { id: 1, name: 'John Doe' }
+//   ]);
+// });
+
+// app.listen(3000);
