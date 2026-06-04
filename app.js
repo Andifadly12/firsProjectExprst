@@ -182,31 +182,95 @@
 // });
 
 
-const express = require('express');
-const app = express();
-const path = require('path');
+// const express = require('express');
+// const app = express();
+// const path = require('path');
 
-const users = [
-  { id: 1, name: 'John Doe' },
-  { id: 2, name: 'Jane Doe' },
-  { id: 3, name: 'Alice' },
-  { id: 4, name: 'Bob' }
-];
-app.get('/', (req, res) => {
-  res.status(200).json(users);
-});
+// const users = [
+//   { id: 1, name: 'John Doe' },
+//   { id: 2, name: 'Jane Doe' },
+//   { id: 3, name: 'Alice' },
+//   { id: 4, name: 'Bob' }
+// ];
+// app.get('/', (req, res) => {
+//   res.status(200).json(users);
+// });
 
-app.get('/users/:id', (req, res) => {
-  const id = Number(req.params.id);
+// app.get('/users/:id', (req, res) => {
+//   const id = Number(req.params.id);
 
-  const user = users.find(user => user.id === id);
+//   const user = users.find(user => user.id === id);
 
-  if (!user) {
-    return res.status(404).send('User tidak ditemukan');
-  }
+//   if (!user) {
+//     return res.status(404).send('User tidak ditemukan');
+//   }
 
-  res.json(user);
-});
-app.listen(3000, () => {
-  console.log('Server berjalan di http://localhost:3000');
-});
+//   res.json(user);
+// });
+// app.listen(3000, () => {
+//   console.log('Server berjalan di http://localhost:3000');
+// });
+
+// const express = require('express');
+// const app = express();
+// const path = require('path');
+
+// const loger = (req, res, next) => {
+//   console.log('masuk');
+//   next(); 
+// }
+
+// app.use(loger);
+
+// app.get('/users', (req, res) => {
+//   res.send('Hello World');
+// });
+
+// app.listen(3000, () => {
+//   console.log('Server berjalan di http://localhost:3000');
+// });
+
+
+// const express = require('express');
+// const app = express();
+// const path = require('path');
+
+// con
+
+// app.use(express.static(path.join(__dirname, 'public')));
+
+
+// app.get('/', (req, res) => {
+//   res.sendFile(path.join(__dirname, 'index.html'));
+// });
+
+
+
+// app.listen(3000, () => {
+//   console.log('Server berjalan di http://localhost:3000');
+// });
+
+// const express = require('express');
+// const app = express();
+// const path = require('path');
+// const handlerr=(err, req, res, next) => {
+//   console.error(err.stack);
+//   res.status(500).json({message: err.message  });
+// }
+
+
+// app.use(express.json());
+
+// app.get('/', (req, res) => {
+//   res.send('Hello World');  
+// });
+
+// app.get('/about', (req, res, next) => {
+//   const error = new Error('Terjadi kesalahan');
+//   next(error);
+// });
+// app.use(handlerr);
+
+// app.listen(3000, () => {
+//   console.log('Server berjalan di http://localhost:3000');
+// }); 
